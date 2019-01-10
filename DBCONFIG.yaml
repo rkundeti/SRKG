@@ -1,0 +1,13 @@
+pgsql:
+    host: localhost
+    user: postgres
+    passwd: getdb
+    port: 5432
+    db: ETL
+    
+other:
+    preprocessing_queue:
+        - preprocessing.scale_and_center
+        - preprocessing.dot_reduction
+        - preprocessing.connect_lines
+    use_anonymous: yes
